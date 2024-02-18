@@ -1,0 +1,92 @@
+.sidebar {
+  background:rgb(47, 36, 116);
+  width: 200px;
+  height: 100vh;
+  border-radius: 0px 10px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+}
+
+.sidebar h1 {
+  color: rgb(255, 255, 255);
+  margin: 20px;
+  font-size: 35px;
+}
+.sidebar .links-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  position: relative;
+  gap: 20px;
+}
+
+.sidebar .links-list .link {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.sidebar .links-list .active {
+  color: white;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar .links-list .active::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background: rgb(0, 217, 255);
+  top: 0;
+  left: -3px;
+  border-radius: 4px;
+}
+
+.sidebar .links-list .link li {
+  display: flex;
+  width: 80%;
+  margin: 10px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sidebar .links-list .link li span {
+  font-size: 30px;
+}
+
+.sidebar .links-list div {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    color: white;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 34px;
+    left: 20px;
+    justify-content: center;
+    
+}
+.sidebar .links-list div .settings-link {
+    text-decoration: none;
+    color: white;
+}
+.sidebar .links-list div > * {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar{
+    display: none;
+  }
+  
+}

@@ -1,0 +1,66 @@
+.verify {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: start;
+    background: rgb(4, 4, 54);
+}
+
+
+.verify .check {
+    margin-top: 100px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+}
+
+.verify .check input {
+    width: 60%;
+    padding: 30px ;
+    border-radius: 5px;
+    border: none;
+      overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 21px;
+}
+.verify .check input::placeholder {
+ font-size: 20px;
+}
+.verify .check button {
+    padding: 20px;
+    border:none;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    min-width: 140px;
+
+
+}
+.verify .check input:focus{
+  outline: none;
+  border: none;
+}
+
+@media  screen and (max-width: 768px) {
+    .verify .check {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .verify .check input {
+      width: 90vw;
+      margin: 10px;
+    }
+    .verify .check button {
+      width: 50vw;
+      text-align: center;
+      margin: 10px;
+    }
+}

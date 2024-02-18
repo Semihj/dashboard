@@ -1,0 +1,12 @@
+
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  background: hsl(223, 96%, 9%);
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
