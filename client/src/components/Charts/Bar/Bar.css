@@ -1,61 +1,26 @@
 .bar {
-    background:white;
-    border-radius:10px;
-    display:flex;
-    flex-direction:column;
-    margin:20px
-    width: 250px;
-    min-height: 500px;
-    gap:50px;
-}
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 
+  .bar_title {
+    font-size: 21px;
 
-.bar .info {
-    margin:20px 0;
-    color:black;
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-.bar .info h1 {
-    margin:20px;
-}
-
-.bar .info .colors {
-   margin:10px;
-   display:flex;
-   flex-direction:column;
-   gap:10px;
-}
-.bar .info .colors p {
- display:flex;
- gap:10px;
- align-items:center;
-
-}
-.bar .info .colors p .color1 {
-    width:20px;
-    height:20px;
-    background:blue;
-    border-radius:50%;
-
-}
-.bar .info .colors p .color2 {
-    width:20px;
-    height:20px;
-    background:red;
-    border-radius:50%;
+  }
+  .bar_chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
 
 }
 
-@media screen and (min-width: 768px) {
-    .bar {
-        min-width: 500px;
-    }
-}
-@media screen and (min-width: 1120px) {
-    .bar {
-        min-width: 800px;
-    }
+.recharts-default-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }

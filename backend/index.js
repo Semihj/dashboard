@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import User from "./models/user.model.js";
 import AuthRouter from "./routes/auth.js"
+import UserRouter from "./routes/user.js"
 import morgan from "morgan"
 import cookieParser from "cookie-parser";
 const app = express();
@@ -15,6 +16,7 @@ mongoose.connect(process.env.MONGO_URL).then( async (data) => {
   });
 app.use(morgan("common"))
 app.use("/api/auth",AuthRouter)
+app.use("/api/users",UserRouter)
 
 app.listen(process.env.PORT,() => {
     console.log("listening on port "+process.env.PORT);

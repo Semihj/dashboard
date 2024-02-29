@@ -1,0 +1,79 @@
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-width;
+        height: max-content;
+        background: rgb(1, 32, 49);
+        position: relative;
+        border-radius: 6px;
+        
+        @media screen and (min-width: 768px) {
+            width: 600px;
+            height: max-content;
+            padding: 20px;
+        }
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border: none;
+            background: transparent;
+            padding: 5px;
+            font-size: 21px;
+            color: white;
+        }
+        .form {
+            width: 100%;
+            height: max-content;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 11px;
+            align-items: center;
+            margin-top: 20px;
+            div {
+                display: flex;
+                flex-direction: column;
+                margin: 15px;
+                gap: 6px;
+
+                label {
+                    font-size: 20px;
+                }
+                input {
+                    padding: 12px;
+                    border:none;
+                    border-radius: 5px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                
+           
+            }   
+        }
+  .add_btn {
+                display: flex;
+                margin-top: 20px;
+                border: none;
+                border-radius: 3px;
+                padding: 20px;
+
+              }    }
+  
+}
+
+

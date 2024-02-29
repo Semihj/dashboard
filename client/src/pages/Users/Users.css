@@ -1,0 +1,51 @@
+.users {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px;
+  gap: 20px;
+  .add_users {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+   
+    .users_title {
+      display: flex;
+      font-size: 26px;
+    }
+    .users_btn {
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  }
+  .data-grid {
+    background: white;
+    width: max-content;
+  
+    .edit {
+      color:green;
+      font-size: 18px;
+      margin-left: 5px;
+    }
+    .delete {
+      color: red;
+      font-size: 18px;
+    }
+  }
+  .user_img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

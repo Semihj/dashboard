@@ -1,0 +1,21 @@
+.line {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .line_title {
+        font-size: 20px;
+    }
+    .line_chart {
+        display:flex ;
+        width: 100%;
+        height: 100%;
+    }
+    color: ;
+}
+
+@media screen and (max-width:768px) {
+  
+}

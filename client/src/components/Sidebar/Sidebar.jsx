@@ -13,27 +13,41 @@ export default function Sidebar() {
   const location = useLocation();
   const dispatch = useDispatch();
   const links = document.querySelectorAll(".link")
-  const [removeCookie] = useCookies()
+  const [cookie,removeCookie] = useCookies(["user"])
   useEffect(() => {
+
    handleAddClass()
-  }, [location])
+  }, [location.pathname])
+
+  useEffect(() => { 
+   console.log(location.pathname)
+   handleAddClass()
+  }, [])
 
   
   const handleAddClass = () => {
+    
     links.forEach((link) => {
+      
       if(link.id === location.pathname) {
         link.classList.add("active");
+      
+      } else {
+        link.classList.remove("active");
       }
     })
   }
 
-  links.forEach((link) => console.log(link.id) )
-  
+  const handleSignOut = async () => {
+    
+    removeCookie("user", { path: '/', domain: 'localhost' })
+    dispatch(signOutSuccess())
+  }
   return (
     <div className='sidebar' >
       <h1>Chat-App</h1>
       <ul className='links-list' >
-        <Link className='link' id="/"  to={"/"}>
+        <Link className='link ' id="/"  to={"/"}>
           <li>Home <span  ><FaHome className='icon' /></span> </li>
         </Link>
         <Link className='link' id="/payments"  to={"/payments"}>
@@ -48,10 +62,7 @@ export default function Sidebar() {
         
         <div className="">
           <Link to={"/settings"} className='settings-link' ><IoMdSettings/></Link>
-          <GoSignOut onClick={() => {
-            dispatch(signOutSuccess())
-            removeCookie("user", { path: '/', domain: 'localhost' })
-          } }  />
+          <GoSignOut onClick={() => handleSignOut()} />
         </div>
       </ul>
     </div>

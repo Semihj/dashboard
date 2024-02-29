@@ -1,0 +1,67 @@
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(8, 3, 36);
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    
+}
+.mobile-sidebar .menu-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    display: flex;
+}
+.mobile-sidebar h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    color: white;
+}
+.mobile-sidebar .links-list {
+    list-style: none;
+    margin: 20px;
+    margin-top: 60px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.mobile-sidebar .links-list .link {
+    display: flex;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-sidebar .links-list .link li {
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+}
+
+.mobile-sidebar .links-list div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+}
+.mobile-sidebar .links-list div .settings-link {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    font-size: 30px;
+}

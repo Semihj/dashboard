@@ -69,4 +69,13 @@ router.post("/login",async (req,res) => {
     }
 })
 
+router.get("/:id/secretKey",async (req, res) => {
+    try {
+        const admin = await Admin.findById(req.params.id)
+        res.status(200).json(admin.secretKey)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 export default router;
